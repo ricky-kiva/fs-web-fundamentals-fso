@@ -18,7 +18,7 @@ sequenceDiagram
   s -->>- b: Send `data.json` file
   Note right of b: The browser executes the callback function by `xhttp.onreadystatechange`
 
-  b ->> b: Parse data from `data.json` to `notes` array
-  b ->> b: Execute `redrawNotes()`, replace old `ul` with new `ul` containing new data from `notes` array
+  b ->> b: Parse data from `data.json` to `notes` array in client-side
+  b ->> b: Execute `redrawNotes()`, replace old `ul` with new `ul` containing new data from `notes` array in client-side
   Note right of b: The browser renders updates during callback execution
 ```
