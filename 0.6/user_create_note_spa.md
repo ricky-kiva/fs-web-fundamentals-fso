@@ -3,7 +3,7 @@ sequenceDiagram
   participant b as Browser
   participant s as Server
 
-  b ->> b: Prevent form's `onsubmit` default behvior
+  b ->> b: Prevent form's `onsubmit` default behavior
   b ->> b: Create `note` variable with {form's value & current time}
   b ->> b: Push `note` to `notes` array within the client-side
   b ->> b: Set form's first field value to empty string ("")
