@@ -14,6 +14,7 @@ sequenceDiagram
   Note right of b: Request Header's "content type" sets to `application/json`. Payload is `note` converted to JSON string
   s ->> s: Push payload data to `notes` array within the server
   s -->>- b: {message: "note created"}
+  Note left of s: Status Code: 201 Created
 
   b ->> b: Log response text (this.responseText)
 ```
