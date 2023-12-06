@@ -6,6 +6,7 @@ sequenceDiagram
   browser ->>+ server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
   server ->> server: Push data {form's payload & current time} to `notes` array within the server
   server -->>- browser: Redirect to /exampleapp/notes (in Response Header `location`)
+  Note left of server: Status Code: 302 Found
 
   browser ->>+ server: GET https://studies.cs.helsinki.fi/exampleapp/notes
   server -->>- browser: Send `notes.html` document
